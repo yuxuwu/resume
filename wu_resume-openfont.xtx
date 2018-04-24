@@ -1,0 +1,216 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.2 (16/9/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[]{deedy-resume-openfont}
+\usepackage{fancyhdr}
+ 
+\pagestyle{fancy}
+\fancyhf{}
+ 
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{Yu Xuan}{Wu}{
+\href{mailto:ywu148@binghamton.edu}{ywu148@binghamton.edu} | 929.500.6548 \\ 2078 East 53rd Place | Brooklyn, NY 11234
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.33\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+
+\subsection{Binghamton University}
+\descript{BS in Computer Science}
+\location{Expected May 2019 | Vestal, NY}
+\location{Watson School of Engineering }
+\location{ Cum. GPA: 3.12 / 4.0 \\
+Major GPA: 3.20 / 4.0 }
+
+\subsection{}
+
+\subsection{SUNY Poly. University}
+\descript{BS in Computer Science}
+\location{Aug. 2015 - May 2016 | Utica, NY}
+\location{ Cum. GPA: 3.83 / 4.0}
+\location{President's Excellence List}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Links} 
+Github:// \href{https://github.com/yuxuwu}{\bf yuxuwu} \\
+LinkedIn://  \href{https://www.linkedin.com/in/yu-xuan-wu}{\bf yu-xuan-wu} \\
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Coursework}
+
+\subsection{Undergraduate}
+Algorithm Design \& Analysis \\
+Data Structures \& Algorithms \\
+Operating Systems \\
+Automata Theory \& Formal Lg. \\
+Adv. Computer Architecture
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\subsection{Programming}
+
+\location{Experienced:}
+Javascript \textbullet{}  Python \textbullet{} C++ \textbullet{} Unix(Debian) \\
+Node.js \textbullet{} HTML/CSS \textbullet{} Vim
+
+\location{Familiar:}
+MongoDB \textbullet{} Angular2 \textbullet{} Express \textbullet{}  \\
+Java \textbullet{} C \textbullet{} ROS \textbullet{} \LaTeX
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+
+\runsubsection{MEDICAL LOGISTICS INC.}
+\descript{| Software Engineering Intern }
+\location{June 2017 – Aug 2017 | Brooklyn, NY}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Introduced Python to patient filing workflow. Saved weeks of pre-processing time for patients.
+\item Developed \textit{Flask} application \textit{doc2ocr} - a conversion tool for PDFs to machine-readable files. 
+\item Learned and used Python \textit{requests} and \textit{Mechanize} library to upload patient files.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{HEALTHY START HOMECARE}
+\descript{| Software Engineering Intern }
+\location{June 2016 – Aug 2016 | Brooklyn, NY}
+\begin{tightemize}
+\item Automated management of Excel files with Python. Saved 2 months of data entry time annually.
+\item Compiled customer financial information to determine lack of equity in government backing for Chinese organizations.
+\end{tightemize}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     POSITIONS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Positions}
+
+\runsubsection{Co.R.E. STUDENT LIVING COMMUNITY}
+\descript{| Systems Administrator}
+\location{May 2018 – | Vestal, NY}
+\begin{tightemize}
+\item Managed security of server using firewalls, service audits, and weekly backups.
+\item Deployed websites for other student communities through \textit{nginx} proxy.
+\item Leading rebranding efforts to raise awareness of CoRE's role in the campus community. In charge of developing new CoRE website and online platform to host web-based projects and technical diaries. Plan to receive input from student users.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{BINGHAMTON MARS ROVER TEAM}
+\descript{| Core Automation Engineer}
+\location{Dec. 2017 – | Vestal, NY}
+\begin{tightemize}
+\item Learned ROS framework and OpenCV visual processing library. Developed modular applications in C++.
+\item Led development of image recognition and serial port communication components of the Rover Team's robot.
+\item Proposed teaching plan to develop talent for future generation of the team.
+\end{tightemize}
+\sectionsep
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     AWARDS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Awards} 
+\runsubsection{HackBU HACKATHON 2018 \\} 
+\location{Best Fintech Hack \& Best Open-Source and Humanitarian Hack}
+Worked with an Accounting student to develop Kibbutz in 24 hours, an online platform for \textbf{local-crowdfunding}. Gave presentation about \textbf{features} and \textbf{use cases} of the app to judges. Full-stack development using \textbf{MEAN stack} and \textbf{RESTful routing}.
+\sectionsep
+
+\end{minipage} 
+\end{document}  \documentclass[]{article}
